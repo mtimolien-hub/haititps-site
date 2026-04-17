@@ -1,0 +1,190 @@
+/**
+ * HaitiTPS Trilingual Translation System
+ * Supports: Haitian Creole (ht), English (en), French (fr)
+ */
+(function(){
+'use strict';
+var T={
+  /* Legal Bar */
+  legal_bar:{
+    ht:'<strong>AVÈTISMAN:</strong> Sagesse Solutions Administratives (SSA) pa avoka e pa bay konsèy legal. Nou kolekte done pèsonèl sèlman pou prepare aplikasyon yo. Pou ka konplèks, kontakte yon avoka imigrasyon. <a href="privacy.html">Règ Konfidansyalite</a> | <a href="legal.html">Avètisman Legal</a>',
+    en:'<strong>DISCLAIMER:</strong> Sagesse Solutions Administratives (SSA) is not a law firm and does not provide legal advice. We collect personal data solely to prepare applications. For complex cases, consult an immigration attorney. <a href="privacy.html">Privacy Policy</a> | <a href="legal.html">Legal Disclaimer</a>',
+    fr:'<strong>AVERTISSEMENT :</strong> Sagesse Solutions Administratives (SSA) n\'est pas un cabinet d\'avocats et ne fournit pas de conseils juridiques. Nous collectons les données personnelles uniquement pour préparer les demandes. Pour les cas complexes, consultez un avocat en immigration. <a href="privacy.html">Confidentialité</a> | <a href="legal.html">Avertissement Légal</a>'
+  },
+  /* Hero */
+  hero_badge:{ht:"Sèvis Imigrasyon Pwofesyonèl",en:"Professional Immigration Services",fr:"Services d'Immigration Professionnels"},
+  hero_title:{
+    ht:'Èd Ekspè pou <span class="highlight">Aplikasyon USCIS</span> ou yo',
+    en:'Expert Help for Your <span class="highlight">USCIS Applications</span>',
+    fr:'Aide Experte pour vos <span class="highlight">Demandes USCIS</span>'
+  },
+  hero_subtitle:{
+    ht:"Sagesse Solutions Administratives (SSA) konekte imigran Ayisyen ak ekspè ki ka ede yo ak TPS, Kat Travay, Dokiman Vwayaj, Green Card, Sitwayènte, ak plis ankò. Nou la pou gide w nan chak etap.",
+    en:"Sagesse Solutions Administratives (SSA) connects Haitian immigrants with experts who can help with TPS, Work Permits, Travel Documents, Green Cards, Citizenship, and more. We guide you every step of the way.",
+    fr:"Sagesse Solutions Administratives (SSA) connecte les immigrants haïtiens avec des experts pour les aider avec le TPS, les permis de travail, les documents de voyage, les cartes vertes, la citoyenneté, et plus encore."
+  },
+  hero_btn_apply:{ht:"Kòmanse Aplikasyon W",en:"Start Your Application",fr:"Commencer Votre Demande"},
+  hero_btn_call:{ht:"Rele Nou: (302) 290-8592",en:"Call Us: (302) 290-8592",fr:"Appelez-Nous: (302) 290-8592"},
+  hero_btn_whatsapp:{ht:"WhatsApp Nou",en:"WhatsApp Us",fr:"WhatsApp"},
+  stat_forms:{ht:"Fòm USCIS",en:"USCIS Forms",fr:"Formulaires USCIS"},
+  stat_languages:{ht:"Lang Disponib",en:"Languages",fr:"Langues"},
+  stat_dedication:{ht:"Dedikasyon",en:"Dedication",fr:"Dévouement"},
+
+  /* TPS Alert */
+  tps_alert_title:{ht:"⚠ DÈNYE NOUVÈL TPS AYITI — Avril 2026",en:"⚠ LATEST HAITI TPS NEWS — April 2026",fr:"⚠ DERNIÈRES NOUVELLES TPS HAÏTI — Avril 2026"},
+  tps_alert_body:{
+    ht:"Sekretè Sekirite Nasyonal la te deside mete fen nan deziyasyon TPS pou Ayiti nan dat 28 Novanm 2025, ak yon dat tèminazon 3 Fevriye 2026. Men, nan dat 2 Fevriye 2026, yon jij federal nan Washington D.C. te bay yon lòd pou bloke desizyon sa a (Miot et al. v. Trump et al.). TPS Ayiti toujou an vigè pou kounye a gras ak lòd tribinal la. Kou Siprèm lan gen odyans oral sou dosye sa a ki planifye pou fen Avril 2026.",
+    en:"The Secretary of Homeland Security terminated the TPS designation for Haiti on November 28, 2025, with a termination date of February 3, 2026. However, on February 2, 2026, a federal judge in Washington D.C. issued an order blocking this decision (Miot et al. v. Trump et al.). Haiti TPS remains in effect thanks to this court order. The Supreme Court has oral arguments scheduled for late April 2026.",
+    fr:"Le Secrétaire à la Sécurité intérieure a mis fin à la désignation TPS pour Haïti le 28 novembre 2025, avec une date de fin au 3 février 2026. Cependant, le 2 février 2026, un juge fédéral à Washington D.C. a émis une ordonnance bloquant cette décision (Miot et al. v. Trump et al.). Le TPS Haïti reste en vigueur grâce à cette ordonnance. La Cour suprême a des audiences prévues fin avril 2026."
+  },
+
+  /* Services Section */
+  services_title:{ht:"Sèvis Nou Yo",en:"Our Services",fr:"Nos Services"},
+  services_subtitle:{ht:"Nou ofri asistans konplè pou tout aplikasyon imigrasyon USCIS ou yo.",en:"We provide comprehensive assistance for all your USCIS immigration applications.",fr:"Nous offrons une assistance complète pour toutes vos demandes d'immigration USCIS."},
+  svc_tps:{ht:"Fòm I-821 — TPS (Temporary Protected Status)",en:"Form I-821 — TPS (Temporary Protected Status)",fr:"Formulaire I-821 — TPS (Statut de Protection Temporaire)"},
+  svc_tps_desc:{ht:"Aplikasyon ak renouvèlman TPS pou sitwayen Ayisyen ki nan Etazini.",en:"TPS application and renewal for Haitian nationals in the United States.",fr:"Demande et renouvellement du TPS pour les ressortissants haïtiens aux États-Unis."},
+  svc_ead:{ht:"Fòm I-765 — Kat Travay (EAD)",en:"Form I-765 — Work Permit (EAD)",fr:"Formulaire I-765 — Permis de Travail (EAD)"},
+  svc_ead_desc:{ht:"Jwenn oswa renouvle Kat Travay (Employment Authorization Document) ou.",en:"Obtain or renew your Employment Authorization Document (EAD).",fr:"Obtenir ou renouveler votre Document d'Autorisation d'Emploi (EAD)."},
+  svc_travel:{ht:"Fòm I-131 — Dokiman Vwayaj",en:"Form I-131 — Travel Document",fr:"Formulaire I-131 — Document de Voyage"},
+  svc_travel_desc:{ht:"Aplike pou Advance Parole pou vwayaje deyò Etazini ak retounen.",en:"Apply for Advance Parole to travel outside the U.S. and return.",fr:"Demander l'Advance Parole pour voyager hors des États-Unis et revenir."},
+  svc_130:{ht:"Fòm I-130 — Petisyon pou Fanmi",en:"Form I-130 — Family Petition",fr:"Formulaire I-130 — Pétition Familiale"},
+  svc_130_desc:{ht:"Petisyon pou yon manm fanmi ki elijib pou vin rezidan pèmanan.",en:"Petition for an eligible family member to become a permanent resident.",fr:"Pétition pour un membre de la famille éligible à devenir résident permanent."},
+  svc_485:{ht:"Fòm I-485 — Ajisteman Estati (Green Card)",en:"Form I-485 — Adjustment of Status (Green Card)",fr:"Formulaire I-485 — Ajustement de Statut (Green Card)"},
+  svc_485_desc:{ht:"Aplike pou vin rezidan pèmanan (Green Card) san kite Etazini.",en:"Apply to become a permanent resident (Green Card) without leaving the U.S.",fr:"Demander à devenir résident permanent (Green Card) sans quitter les États-Unis."},
+  svc_n400:{ht:"Fòm N-400 — Sitwayènte Ameriken",en:"Form N-400 — U.S. Citizenship",fr:"Formulaire N-400 — Citoyenneté Américaine"},
+  svc_n400_desc:{ht:"Aplike pou vin sitwayen Ameriken pa natiralizasyon.",en:"Apply to become a U.S. citizen through naturalization.",fr:"Demander la citoyenneté américaine par naturalisation."},
+  svc_translation:{ht:"Tradiksyon Dokiman",en:"Document Translation",fr:"Traduction de Documents"},
+  svc_translation_desc:{ht:"Tradiksyon sètifye dokiman ofisyèl (Kreyòl, Anglè, Fransè).",en:"Certified translation of official documents (Creole, English, French).",fr:"Traduction certifiée de documents officiels (Créole, Anglais, Français)."},
+  svc_submission:{ht:"Soumisyon & Peman USCIS",en:"USCIS Submission & Payment",fr:"Soumission & Paiement USCIS"},
+  svc_submission_desc:{ht:"Nou soumèt aplikasyon ak peman frè USCIS sou non ou.",en:"We submit applications and USCIS fee payments on your behalf.",fr:"Nous soumettons les demandes et paiements de frais USCIS en votre nom."},
+
+  /* Trivia */
+  trivia_title:{ht:"Teste Konesans Ou sou Imigrasyon",en:"Test Your Immigration Knowledge",fr:"Testez Vos Connaissances en Immigration"},
+  trivia_subtitle:{ht:"Jwe jwèt sa a pou aprann plis sou pwosesis imigrasyon an!",en:"Play this game to learn more about the immigration process!",fr:"Jouez à ce jeu pour en apprendre davantage sur le processus d'immigration !"},
+  trivia_q_of:{ht:"Kesyon %1 sou %2",en:"Question %1 of %2",fr:"Question %1 sur %2"},
+  trivia_next:{ht:"Pwochen Kesyon",en:"Next Question",fr:"Question Suivante"},
+  trivia_results_title:{ht:"Rezilta Ou!",en:"Your Results!",fr:"Vos Résultats !"},
+  trivia_play_again:{ht:"Jwe Ankò",en:"Play Again",fr:"Rejouer"},
+  trivia_score_msg:{ht:"Ou te jwenn %1 sou %2 kòrèk!",en:"You got %1 out of %2 correct!",fr:"Vous avez obtenu %1 sur %2 !"},
+
+  /* CTA */
+  cta_title:{ht:"Prè pou Kòmanse Aplikasyon W?",en:"Ready to Start Your Application?",fr:"Prêt à Commencer Votre Demande ?"},
+  cta_subtitle:{ht:"Kontakte nou jodi a pou yon konsiltasyon gratis. Nou la pou ede w.",en:"Contact us today for a free consultation. We are here to help you.",fr:"Contactez-nous aujourd'hui pour une consultation gratuite. Nous sommes là pour vous aider."},
+
+  /* Contact */
+  contact_page_title:{ht:"Kontakte Nou",en:"Contact Us",fr:"Contactez-Nous"},
+  contact_page_subtitle:{ht:"Nou la pou ede w. Kontakte nou pa telefòn, WhatsApp, oswa ranpli fòm lan.",en:"We are here to help you. Contact us by phone, WhatsApp, or fill out the form.",fr:"Nous sommes là pour vous aider. Contactez-nous par téléphone, WhatsApp, ou remplissez le formulaire."},
+  contact_info_title:{ht:"Enfòmasyon Kontak",en:"Contact Information",fr:"Coordonnées"},
+  contact_phone_label:{ht:"Telefòn / WhatsApp",en:"Phone / WhatsApp",fr:"Téléphone / WhatsApp"},
+  contact_address_label:{ht:"Adrès Postal",en:"Mailing Address",fr:"Adresse Postale"},
+  contact_hours_label:{ht:"Lè Travay",en:"Business Hours",fr:"Heures d'Ouverture"},
+  contact_hours_value:{ht:"Lendi - Vandredi: 9:00 AM - 6:00 PM EST\nSamdi: 10:00 AM - 2:00 PM EST",en:"Monday - Friday: 9:00 AM - 6:00 PM EST\nSaturday: 10:00 AM - 2:00 PM EST",fr:"Lundi - Vendredi : 9h00 - 18h00 EST\nSamedi : 10h00 - 14h00 EST"},
+  contact_privacy_note:{ht:"🔒 Tout enfòmasyon ou pataje ak nou konfidansyèl. Nou itilize done w sèlman pou prepare aplikasyon USCIS ou yo.",en:"🔒 All information you share with us is confidential. We use your data only to prepare your USCIS applications.",fr:"🔒 Toutes les informations que vous partagez avec nous sont confidentielles. Nous utilisons vos données uniquement pour préparer vos demandes USCIS."},
+  contact_form_title:{ht:"Voye yon Mesaj",en:"Send a Message",fr:"Envoyer un Message"},
+
+  /* About */
+  about_page_title:{ht:"Konsènan Sagesse Solutions Administratives",en:"About Sagesse Solutions Administratives",fr:"À Propos de Sagesse Solutions Administratives"},
+  about_page_subtitle:{ht:"Aprann plis sou misyon nou, valè nou, ak angajman nou pou kominote Ayisyen an.",en:"Learn more about our mission, values, and commitment to the Haitian community.",fr:"Apprenez-en davantage sur notre mission, nos valeurs et notre engagement envers la communauté haïtienne."},
+  about_mission_title:{ht:"Misyon Nou",en:"Our Mission",fr:"Notre Mission"},
+  about_mission_p1:{ht:"Sagesse Solutions Administratives (SSA) se yon sant sèvis konsiltasyon ki fonde ak yon sèl objektif: konekte imigran Ayisyen ak ekspè ki ka ede yo navige nan sistèm imigrasyon Ameriken an avèk konfyans, presizyon, ak diyite.",en:"Sagesse Solutions Administratives (SSA) is a consulting service center founded with a single objective: connecting Haitian immigrants with experts who can help them navigate the American immigration system with confidence, precision, and dignity.",fr:"Sagesse Solutions Administratives (SSA) est un centre de services de consultation fondé avec un seul objectif : connecter les immigrants haïtiens avec des experts pour naviguer dans le système d'immigration américain avec confiance, précision et dignité."},
+  about_mission_p2:{ht:"Nou konnen kijan pwosesis imigrasyon an ka konplike ak estrèsan. Se poutèt sa nou la — pou fè tout bagay pi senp pou ou.",en:"We know how complicated and stressful the immigration process can be. That's why we're here — to make everything simpler for you.",fr:"Nous savons combien le processus d'immigration peut être compliqué et stressant. C'est pourquoi nous sommes là — pour tout simplifier pour vous."},
+  about_mission_p3:{ht:"Nou pa avoka. Nou pa bay konsèy legal. Men nou gen eksperyans nan prepare ak soumèt aplikasyon imigrasyon yo kòrèkteman ak pwofesyonalis. Pou ka konplèks oswa kesyon legal, nou toujou rekòmande pou w kontakte yon avoka imigrasyon ki gen lisans.",en:"We are not attorneys. We do not provide legal advice. But we have experience in accurately and professionally preparing and submitting immigration applications. For complex cases or legal questions, we always recommend contacting a licensed immigration attorney.",fr:"Nous ne sommes pas avocats. Nous ne fournissons pas de conseils juridiques. Mais nous avons l'expérience de la préparation et de la soumission précise et professionnelle des demandes d'immigration."},
+  about_values_title:{ht:"Valè Nou Yo",en:"Our Values",fr:"Nos Valeurs"},
+  value1:{ht:"Entegrite — Nou travay ak onètete ak transparans nan tout sa nou fè.",en:"Integrity — We work with honesty and transparency in everything we do.",fr:"Intégrité — Nous travaillons avec honnêteté et transparence dans tout ce que nous faisons."},
+  value2:{ht:"Presizyon — Nou verifye chak detay nan aplikasyon w pou evite erè.",en:"Precision — We verify every detail in your application to avoid errors.",fr:"Précision — Nous vérifions chaque détail de votre demande pour éviter les erreurs."},
+  value3:{ht:"Respè — Nou trete chak kliyan ak diyite ak respè.",en:"Respect — We treat every client with dignity and respect.",fr:"Respect — Nous traitons chaque client avec dignité et respect."},
+  value4:{ht:"Aksesibilite — Nou sèvi w nan lang ou: Kreyòl, Anglè, ak Fransè.",en:"Accessibility — We serve you in your language: Creole, English, and French.",fr:"Accessibilité — Nous vous servons dans votre langue : Créole, Anglais et Français."},
+  value5:{ht:"Konfidansyalite — Done pèsonèl ou an pwoteje e itilize sèlman pou aplikasyon w.",en:"Confidentiality — Your personal data is protected and used only for your application.",fr:"Confidentialité — Vos données personnelles sont protégées et utilisées uniquement pour votre demande."},
+  value6:{ht:"Angajman — Nou dedye pou sèvi kominote Ayisyen an ak tout kè nou.",en:"Commitment — We are dedicated to serving the Haitian community wholeheartedly.",fr:"Engagement — Nous sommes dédiés à servir la communauté haïtienne de tout cœur."},
+
+  /* TPS Info Page */
+  tps_page_title:{ht:"Enfòmasyon sou TPS Ayiti",en:"Haiti TPS Information",fr:"Informations sur le TPS Haïti"},
+  tps_page_subtitle:{ht:"Tout sa ou bezwen konnen sou Temporary Protected Status (TPS) pou Ayiti.",en:"Everything you need to know about Temporary Protected Status (TPS) for Haiti.",fr:"Tout ce que vous devez savoir sur le Statut de Protection Temporaire (TPS) pour Haïti."},
+
+  /* Privacy */
+  privacy_page_title:{ht:"Règ Konfidansyalite",en:"Privacy Policy",fr:"Politique de Confidentialité"},
+  privacy_page_subtitle:{ht:"Kijan nou kolekte, itilize, ak pwoteje enfòmasyon pèsonèl ou.",en:"How we collect, use, and protect your personal information.",fr:"Comment nous collectons, utilisons et protégeons vos informations personnelles."},
+
+  /* Legal */
+  legal_page_title:{ht:"Avètisman Legal",en:"Legal Disclaimer",fr:"Avertissement Légal"},
+  legal_page_subtitle:{ht:"Tanpri li avètisman legal sa a avèk atansyon anvan ou itilize sèvis nou yo.",en:"Please read this legal disclaimer carefully before using our services.",fr:"Veuillez lire attentivement cet avertissement légal avant d'utiliser nos services."},
+
+  /* Footer */
+  footer_about:{ht:"Sagesse Solutions Administratives (SSA) se yon sant sèvis konsiltasyon ki konekte imigran Ayisyen ak ekspè pou ede yo ak aplikasyon USCIS yo.",en:"Sagesse Solutions Administratives (SSA) is a consulting service center connecting Haitian immigrants with experts to help them with USCIS applications.",fr:"Sagesse Solutions Administratives (SSA) est un centre de services de consultation connectant les immigrants haïtiens avec des experts pour les aider avec les demandes USCIS."},
+  footer_links_title:{ht:"Lyen Rapid",en:"Quick Links",fr:"Liens Rapides"},
+  footer_services_title:{ht:"Sèvis Nou Yo",en:"Our Services",fr:"Nos Services"},
+  footer_legal_title:{ht:"Legal",en:"Legal",fr:"Légal"},
+  footer_translation:{ht:"Tradiksyon",en:"Translation",fr:"Traduction"},
+  footer_disclaimer:{
+    ht:"Sagesse Solutions Administratives (SSA) pa yon kabinè avoka epi nou pa bay konsèy legal. Nou kolekte enfòmasyon pèsonèl sèlman pou prepare aplikasyon imigrasyon. Pou ka konplèks, tanpri kontakte yon avoka imigrasyon ki gen lisans.",
+    en:"Sagesse Solutions Administratives (SSA) is not a law firm and does not provide legal advice. We collect personal information solely to prepare immigration applications. For complex cases, please consult a licensed immigration attorney.",
+    fr:"Sagesse Solutions Administratives (SSA) n'est pas un cabinet d'avocats et ne fournit pas de conseils juridiques. Nous collectons les informations personnelles uniquement pour préparer les demandes d'immigration. Pour les cas complexes, veuillez consulter un avocat en immigration agréé."
+  },
+
+  /* Nav labels (for footer links) */
+  nav_home:{ht:"Akèy",en:"Home",fr:"Accueil"},
+  nav_services:{ht:"Sèvis",en:"Services",fr:"Services"},
+  nav_tps:{ht:"TPS Info",en:"TPS Info",fr:"Info TPS"},
+  nav_about:{ht:"Konsènan Nou",en:"About Us",fr:"À Propos"},
+  nav_contact:{ht:"Kontakte Nou",en:"Contact Us",fr:"Contactez-Nous"},
+  nav_privacy:{ht:"Règ Konfidansyalite",en:"Privacy Policy",fr:"Politique de Confidentialité"},
+  nav_legal:{ht:"Avètisman Legal",en:"Legal Disclaimer",fr:"Avertissement Légal"},
+
+  /* Services page detail blocks */
+  svc_detail_tps_title:{ht:"📋 Fòm I-821 — Temporary Protected Status (TPS)",en:"📋 Form I-821 — Temporary Protected Status (TPS)",fr:"📋 Formulaire I-821 — Statut de Protection Temporaire (TPS)"},
+  svc_detail_tps_p1:{ht:"Temporary Protected Status (TPS) se yon estati tanporè ki pèmèt sitwayen Ayisyen ki deja nan Etazini rete legalman ak travay pandan yon peryòd ki detèmine. Pou elijib, ou dwe te nan Etazini depi dat USCIS mande a.",en:"Temporary Protected Status (TPS) is a temporary status allowing Haitian nationals already in the U.S. to stay legally and work for a determined period. To be eligible, you must have been in the U.S. since the date required by USCIS.",fr:"Le Statut de Protection Temporaire (TPS) est un statut temporaire permettant aux ressortissants haïtiens déjà aux États-Unis de rester légalement et de travailler pendant une période déterminée."},
+  svc_detail_tps_p2:{ht:"<strong>Sa nou fè pou ou:</strong> Nou prepare Fòm I-821 la, rasanble tout dokiman sipò yo, verifye tout bagay, epi soumèt aplikasyon an bay USCIS. Nou jere renouvèlman TPS tou.",en:"<strong>What we do for you:</strong> We prepare Form I-821, gather all supporting documents, verify everything, and submit the application to USCIS. We also handle TPS renewals.",fr:"<strong>Ce que nous faisons pour vous :</strong> Nous préparons le formulaire I-821, rassemblons tous les documents justificatifs, vérifions tout et soumettons la demande à l'USCIS."},
+  svc_detail_ead_title:{ht:"💳 Fòm I-765 — Kat Travay (EAD)",en:"💳 Form I-765 — Work Permit (EAD)",fr:"💳 Formulaire I-765 — Permis de Travail (EAD)"},
+  svc_detail_ead_p1:{ht:"EAD la (Employment Authorization Document) se kat travay ofisyèl la ki pèmèt ou travay legalman nan Etazini. Li nesesè pou tout moun ki gen TPS.",en:"The EAD (Employment Authorization Document) is the official work permit that allows you to work legally in the United States. It is required for all TPS holders.",fr:"L'EAD (Document d'Autorisation d'Emploi) est le permis de travail officiel qui vous permet de travailler légalement aux États-Unis."},
+  svc_detail_travel_title:{ht:"✈ Fòm I-131 — Dokiman Vwayaj (Advance Parole)",en:"✈ Form I-131 — Travel Document (Advance Parole)",fr:"✈ Formulaire I-131 — Document de Voyage (Advance Parole)"},
+  svc_detail_travel_p1:{ht:"Advance Parole pèmèt ou vwayaje deyò Etazini ak retounen legalman. Enpòtan: ou dwe jwenn apwobasyon ANVAN ou vwayaje.",en:"Advance Parole allows you to travel outside the U.S. and return legally. Important: you must receive approval BEFORE traveling.",fr:"L'Advance Parole vous permet de voyager hors des États-Unis et de revenir légalement. Important : vous devez recevoir l'approbation AVANT de voyager."},
+  svc_detail_130_title:{ht:"👨‍👩‍👧‍👦 Fòm I-130 — Petisyon pou Fanmi",en:"👨‍👩‍👧‍👦 Form I-130 — Family Petition",fr:"👨‍👩‍👧‍👦 Formulaire I-130 — Pétition Familiale"},
+  svc_detail_130_p1:{ht:"Fòm I-130 pèmèt yon sitwayen Ameriken oswa rezidan pèmanan fè petisyon pou yon manm fanmi elijib vini Etazini kòm rezidan pèmanan.",en:"Form I-130 allows a U.S. citizen or permanent resident to petition for an eligible family member to come to the United States as a permanent resident.",fr:"Le formulaire I-130 permet à un citoyen américain ou résident permanent de faire une pétition pour un membre de la famille éligible."},
+  svc_detail_485_title:{ht:"🟢 Fòm I-485 — Ajisteman Estati (Green Card)",en:"🟢 Form I-485 — Adjustment of Status (Green Card)",fr:"🟢 Formulaire I-485 — Ajustement de Statut (Green Card)"},
+  svc_detail_485_p1:{ht:"Fòm I-485 pèmèt ou aplike pou vin rezidan pèmanan (Green Card) pandan w deja nan Etazini, san ou pa bezwen retounen nan peyi ou.",en:"Form I-485 allows you to apply to become a permanent resident (Green Card) while already in the United States, without needing to return to your home country.",fr:"Le formulaire I-485 vous permet de demander à devenir résident permanent (Green Card) alors que vous êtes déjà aux États-Unis."},
+  svc_detail_n400_title:{ht:"🇺🇸 Fòm N-400 — Sitwayènte Ameriken",en:"🇺🇸 Form N-400 — U.S. Citizenship",fr:"🇺🇸 Formulaire N-400 — Citoyenneté Américaine"},
+  svc_detail_n400_p1:{ht:"Fòm N-400 se aplikasyon pou natiralizasyon. Si w gen Green Card pou omwen 5 an (oswa 3 an si ou marye ak yon sitwayen Ameriken), ou ka elijib pou vin sitwayen.",en:"Form N-400 is the application for naturalization. If you've had a Green Card for at least 5 years (or 3 years if married to a U.S. citizen), you may be eligible for citizenship.",fr:"Le formulaire N-400 est la demande de naturalisation. Si vous avez une Green Card depuis au moins 5 ans (ou 3 ans si marié(e) à un citoyen américain), vous pourriez être éligible."},
+  svc_detail_translation_title:{ht:"📄 Tradiksyon Dokiman Sètifye",en:"📄 Certified Document Translation",fr:"📄 Traduction Certifiée de Documents"},
+  svc_detail_translation_p1:{ht:"Nou ofri tradiksyon sètifye dokiman ofisyèl nan Kreyòl Ayisyen, Anglè, ak Fransè. Tradiksyon nou yo aksepte pa USCIS.",en:"We offer certified translation of official documents in Haitian Creole, English, and French. Our translations are accepted by USCIS.",fr:"Nous offrons la traduction certifiée de documents officiels en Créole Haïtien, Anglais et Français. Nos traductions sont acceptées par l'USCIS."},
+  svc_detail_submission_title:{ht:"📨 Soumisyon Dokiman & Peman USCIS",en:"📨 Document Submission & USCIS Payment",fr:"📨 Soumission de Documents & Paiement USCIS"},
+  svc_detail_submission_p1:{ht:"Nou soumèt aplikasyon konplè ou yo bay USCIS epi nou jere peman frè USCIS sou non ou. Depi 2026, USCIS pa aksepte chèk pèsonèl ankò — sèlman lòd peman (money order), kat kredi/debi, oswa peman elektwonik.",en:"We submit your completed applications to USCIS and handle USCIS fee payments on your behalf. Since 2026, USCIS no longer accepts personal checks — only money orders, credit/debit cards, or electronic payments.",fr:"Nous soumettons vos demandes complètes à l'USCIS et gérons les paiements de frais USCIS en votre nom. Depuis 2026, l'USCIS n'accepte plus les chèques personnels."},
+
+  /* Misc */
+  no_content:{ht:"Pa gen kontni disponib pou kounye a.",en:"No content available at this time.",fr:"Aucun contenu disponible pour le moment."},
+  header_phone:{ht:"Rele nou: ",en:"Call us: ",fr:"Appelez-nous : "}
+};
+
+var currentLang='ht';
+
+function setLang(lang){
+  currentLang=lang;
+  try{localStorage.setItem('haititps_lang',lang)}catch(e){}
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    var key=el.getAttribute('data-i18n');
+    if(T[key]&&T[key][lang]){
+      if(T[key][lang].indexOf('<')>-1){el.innerHTML=T[key][lang]}
+      else{el.textContent=T[key][lang]}
+    }
+  });
+  document.querySelectorAll('.lang-btn').forEach(function(b){
+    b.classList.toggle('active',b.getAttribute('data-lang')===lang);
+  });
+  document.documentElement.lang=lang;
+  if(typeof window.onLangChange==='function') window.onLangChange(lang);
+}
+
+function initI18n(){
+  var saved;
+  try{saved=localStorage.getItem('haititps_lang')}catch(e){}
+  if(saved&&T.hero_badge[saved]) currentLang=saved;
+  document.querySelectorAll('.lang-btn').forEach(function(btn){
+    btn.addEventListener('click',function(){setLang(this.getAttribute('data-lang'))});
+  });
+  setLang(currentLang);
+}
+
+if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',initI18n)}
+else{initI18n()}
+
+window.HT_i18n={T:T,setLang:setLang,getLang:function(){return currentLang}};
+})();
