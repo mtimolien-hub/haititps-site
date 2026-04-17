@@ -1,0 +1,208 @@
+/*
+ * HaitiTPS.us — Google Sites Edition
+ * Sagesse Solutions Administratives (SSA)
+ * Version: 2.0.0-gs
+ */
+
+/* === RESET & VARIABLES === */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ht-blue:#00209F;--ht-red:#D21034;--ht-gold:#F1C40F;
+  --ht-dark:#1a1a2e;--ht-navy:#16213e;--ht-white:#ffffff;
+  --ht-light:#f0f2f5;--ht-gray:#6c757d;--ht-light-gray:#e9ecef;
+  --ht-success:#28a745;--ht-accent:#0f3460;
+  --ht-gradient:linear-gradient(135deg,var(--ht-blue) 0%,var(--ht-navy) 100%);
+  --ht-shadow:0 4px 20px rgba(0,0,0,.1);
+  --ht-shadow-lg:0 10px 40px rgba(0,0,0,.15);
+  --ht-radius:12px;--ht-radius-sm:8px;
+  --ht-transition:all .3s ease;
+  --ht-font-primary:'Poppins','Segoe UI',sans-serif;
+  --ht-font-heading:'Montserrat','Segoe UI',sans-serif;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--ht-font-primary);color:var(--ht-dark);background:var(--ht-white);line-height:1.7;overflow-x:hidden}
+a{color:var(--ht-blue);text-decoration:none;transition:var(--ht-transition)}
+a:hover{color:var(--ht-red)}
+img{max-width:100%;height:auto}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+/* === LANGUAGE TOGGLE === */
+.lang-toggle-wrapper{position:fixed;top:20px;right:20px;z-index:9999;display:flex;flex-direction:column;gap:6px}
+.lang-btn{display:flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;border:3px solid var(--ht-white);background:var(--ht-gradient);color:var(--ht-white);font-weight:700;font-size:13px;cursor:pointer;transition:var(--ht-transition);box-shadow:var(--ht-shadow)}
+.lang-btn:hover{transform:scale(1.1)}
+.lang-btn.active{background:var(--ht-red);border-color:var(--ht-gold);transform:scale(1.1)}
+
+/* === WHATSAPP FLOAT === */
+.whatsapp-float{position:fixed;bottom:25px;right:25px;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:var(--ht-shadow-lg);z-index:9998;transition:var(--ht-transition)}
+.whatsapp-float:hover{transform:scale(1.1);background:#1ebe57}
+.whatsapp-float svg{width:32px;height:32px;fill:var(--ht-white)}
+
+/* === LEGAL BAR === */
+.legal-bar{background:var(--ht-dark);color:rgba(255,255,255,.85);padding:10px 0;font-size:.8rem;border-bottom:3px solid var(--ht-gold);line-height:1.5}
+.legal-bar a{color:var(--ht-gold)}
+.legal-bar a:hover{color:var(--ht-white);text-decoration:underline}
+.legal-bar strong{color:var(--ht-gold)}
+
+/* === HERO SECTION === */
+.hero-section{background:var(--ht-gradient);color:var(--ht-white);padding:80px 0 60px;position:relative;overflow:hidden}
+.hero-section::before{content:'';position:absolute;top:-50%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(241,196,15,.15) 0%,transparent 70%);border-radius:50%}
+.hero-badge{display:inline-block;background:rgba(255,255,255,.15);padding:8px 20px;border-radius:50px;font-size:.85rem;font-weight:600;margin-bottom:20px;backdrop-filter:blur(10px)}
+.hero-title{font-family:var(--ht-font-heading);font-size:2.8rem;font-weight:900;line-height:1.2;margin-bottom:20px}
+.hero-title .highlight{color:var(--ht-gold);display:inline}
+.hero-subtitle{font-size:1.1rem;max-width:700px;margin-bottom:30px;opacity:.9;line-height:1.8}
+.hero-buttons{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:30px}
+.hero-stats{display:flex;gap:40px;margin-top:20px}
+.stat-item{text-align:center}
+.stat-number{font-family:var(--ht-font-heading);font-size:2rem;font-weight:900;color:var(--ht-gold)}
+.stat-label{font-size:.85rem;opacity:.8}
+
+/* === BUTTONS === */
+.btn{display:inline-block;padding:14px 28px;border-radius:var(--ht-radius);font-weight:600;font-size:.95rem;transition:var(--ht-transition);cursor:pointer;border:none;text-align:center}
+.btn-primary{background:var(--ht-gold);color:var(--ht-dark)}
+.btn-primary:hover{background:#d4a90a;color:var(--ht-dark);transform:translateY(-2px);box-shadow:var(--ht-shadow)}
+.btn-secondary{background:transparent;color:var(--ht-white);border:2px solid var(--ht-white)}
+.btn-secondary:hover{background:var(--ht-white);color:var(--ht-blue)}
+.btn-red{background:var(--ht-red);color:var(--ht-white)}
+.btn-red:hover{background:#a00d28;transform:translateY(-2px)}
+.btn-blue{background:var(--ht-blue);color:var(--ht-white)}
+.btn-blue:hover{background:#001a7a;transform:translateY(-2px)}
+
+/* === SECTIONS === */
+.section{padding:60px 0}
+.section-header{text-align:center;margin-bottom:40px}
+.section-header h2{font-family:var(--ht-font-heading);font-size:2rem;font-weight:800;color:var(--ht-dark);margin-bottom:10px}
+.section-header p{color:var(--ht-gray);max-width:600px;margin:0 auto}
+.underline{width:60px;height:4px;background:var(--ht-gradient);border-radius:2px;margin:0 auto 15px}
+
+/* === PAGE HERO (inner pages) === */
+.page-hero{background:var(--ht-gradient);color:var(--ht-white);padding:60px 0 40px;text-align:center}
+.page-hero h1{font-family:var(--ht-font-heading);font-size:2.2rem;font-weight:800;margin-bottom:10px}
+.page-hero p{opacity:.85;max-width:600px;margin:0 auto;font-size:1.05rem}
+
+/* === TPS ALERT BOX === */
+.tps-alert{background:linear-gradient(135deg,#fff8e1 0%,#fff3cd 100%);border:1px solid var(--ht-gold);border-left:5px solid var(--ht-gold);border-radius:var(--ht-radius);padding:25px 30px;margin-bottom:30px}
+.tps-alert h3{font-family:var(--ht-font-heading);font-size:1.2rem;color:var(--ht-dark);margin-bottom:12px}
+.tps-alert p{margin-bottom:10px;color:#333;line-height:1.7}
+.tps-alert p:last-child{margin-bottom:0}
+.alert-date{font-size:.8rem;color:var(--ht-gray);font-style:italic;margin-top:10px}
+
+/* === SERVICE CARDS === */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;margin-top:30px}
+.service-card{background:var(--ht-white);border:1px solid var(--ht-light-gray);border-radius:var(--ht-radius);padding:30px;transition:var(--ht-transition);position:relative;overflow:hidden}
+.service-card:hover{transform:translateY(-5px);box-shadow:var(--ht-shadow-lg);border-color:var(--ht-blue)}
+.service-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:4px;background:var(--ht-gradient)}
+.form-label{display:inline-block;padding:4px 12px;border-radius:20px;font-size:.75rem;font-weight:700;background:rgba(0,32,159,.1);color:var(--ht-blue);margin-bottom:12px}
+.service-card h3{font-family:var(--ht-font-heading);font-size:1.15rem;margin-bottom:10px;color:var(--ht-dark)}
+.service-card p{color:var(--ht-gray);font-size:.9rem;line-height:1.6}
+
+/* === DETAIL BLOCK (services page) === */
+.detail-block{border-left:5px solid var(--ht-blue);background:var(--ht-light);border-radius:0 var(--ht-radius) var(--ht-radius) 0;padding:25px 30px;margin-bottom:25px}
+.detail-block h3{font-family:var(--ht-font-heading);color:var(--ht-blue);margin-bottom:12px;font-size:1.15rem}
+.detail-block p{margin-bottom:10px;line-height:1.7}
+
+/* === TRIVIA GAME === */
+.trivia-container{background:var(--ht-gradient);border-radius:var(--ht-radius);padding:40px;color:var(--ht-white);max-width:800px;margin:0 auto}
+.trivia-container h2{font-family:var(--ht-font-heading);text-align:center;margin-bottom:5px}
+.trivia-subtitle{text-align:center;opacity:.8;margin-bottom:25px}
+.trivia-progress{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;font-size:.85rem}
+.trivia-progress-bar{height:6px;background:rgba(255,255,255,.2);border-radius:3px;flex:1;margin:0 15px}
+.trivia-progress-fill{height:100%;background:var(--ht-gold);border-radius:3px;transition:width .4s ease}
+.trivia-question{font-size:1.15rem;font-weight:600;margin-bottom:20px;line-height:1.5}
+.trivia-options{display:flex;flex-direction:column;gap:10px}
+.trivia-option{background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.3);border-radius:var(--ht-radius-sm);padding:14px 18px;cursor:pointer;transition:var(--ht-transition);font-size:.95rem}
+.trivia-option:hover{background:rgba(255,255,255,.2);border-color:var(--ht-gold)}
+.trivia-option.correct{background:rgba(40,167,69,.3);border-color:var(--ht-success)}
+.trivia-option.wrong{background:rgba(210,16,52,.3);border-color:var(--ht-red)}
+.trivia-option.disabled{pointer-events:none;opacity:.7}
+.trivia-explanation{background:rgba(255,255,255,.1);border-radius:var(--ht-radius-sm);padding:15px;margin-top:15px;display:none;line-height:1.6;font-size:.9rem}
+.trivia-explanation.show{display:block}
+.trivia-next{display:none;margin-top:15px;text-align:center}
+.trivia-next .btn{background:var(--ht-gold);color:var(--ht-dark)}
+.trivia-results{text-align:center;padding:30px}
+.trivia-results h3{font-size:1.5rem;margin-bottom:15px}
+.trivia-score{font-size:3rem;font-weight:900;color:var(--ht-gold);font-family:var(--ht-font-heading)}
+
+/* === FAQ ACCORDION === */
+.faq-list{max-width:800px;margin:0 auto}
+.faq-item{background:var(--ht-white);border:1px solid var(--ht-light-gray);border-radius:var(--ht-radius-sm);margin-bottom:10px;overflow:hidden}
+.faq-question{padding:18px 20px;cursor:pointer;font-weight:600;display:flex;justify-content:space-between;align-items:center;transition:var(--ht-transition)}
+.faq-question:hover{background:var(--ht-light)}
+.faq-question::after{content:'+';font-size:1.3rem;font-weight:700;color:var(--ht-blue);transition:var(--ht-transition)}
+.faq-item.open .faq-question::after{content:'-'}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .3s ease;padding:0 20px}
+.faq-item.open .faq-answer{max-height:500px;padding:0 20px 18px}
+.faq-answer p{color:var(--ht-gray);line-height:1.7}
+
+/* === CONTACT === */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.contact-info{background:var(--ht-gradient);color:var(--ht-white);border-radius:var(--ht-radius);padding:35px}
+.contact-info h3{font-family:var(--ht-font-heading);margin-bottom:25px}
+.contact-item{display:flex;gap:15px;margin-bottom:20px;align-items:flex-start}
+.contact-item-icon{font-size:1.5rem;min-width:35px;text-align:center}
+.contact-item-text h4{margin-bottom:3px;font-size:.95rem}
+.contact-item-text p{opacity:.85;font-size:.9rem}
+.contact-item-text a{color:var(--ht-gold)}
+.contact-form-wrap{background:var(--ht-white);border:1px solid var(--ht-light-gray);border-radius:var(--ht-radius);padding:35px}
+.contact-form-wrap h3{font-family:var(--ht-font-heading);margin-bottom:20px;color:var(--ht-dark)}
+
+/* === ABOUT VALUES === */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.values-list{list-style:none}
+.values-list li{padding:10px 0;border-bottom:1px solid var(--ht-light-gray);display:flex;gap:10px;align-items:flex-start}
+.values-list li:last-child{border-bottom:none}
+.check{color:var(--ht-success);font-weight:700;font-size:1.1rem;min-width:22px}
+
+/* === LEGAL PAGE === */
+.legal-page{padding:40px 0}
+.legal-page .container{max-width:850px}
+.legal-page h2{font-family:var(--ht-font-heading);color:var(--ht-blue);margin-top:30px;margin-bottom:12px;font-size:1.3rem}
+.legal-page p{margin-bottom:12px;line-height:1.8}
+.legal-page ul{margin:10px 0 15px 25px}
+.legal-page ul li{margin-bottom:6px;line-height:1.6}
+.last-updated{font-style:italic;color:var(--ht-gray);margin-bottom:25px}
+
+/* === CTA SECTION === */
+.cta-section{background:var(--ht-gradient);color:var(--ht-white);padding:60px 0;text-align:center}
+.cta-section h2{font-family:var(--ht-font-heading);font-size:2rem;font-weight:800;margin-bottom:15px}
+.cta-section p{max-width:600px;margin:0 auto 25px;opacity:.9;font-size:1.05rem}
+.cta-buttons{display:flex;justify-content:center;gap:15px;flex-wrap:wrap}
+
+/* === FOOTER === */
+.site-footer{background:var(--ht-dark);color:rgba(255,255,255,.8);padding:50px 0 0}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;margin-bottom:30px}
+.footer-col h4{color:var(--ht-white);font-family:var(--ht-font-heading);margin-bottom:15px;font-size:1.1rem}
+.footer-col p{font-size:.9rem;line-height:1.7;opacity:.8}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:8px}
+.footer-col ul li a{color:rgba(255,255,255,.7);font-size:.9rem;transition:var(--ht-transition)}
+.footer-col ul li a:hover{color:var(--ht-gold);padding-left:5px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding:20px 0;text-align:center}
+.footer-bottom p{font-size:.8rem;opacity:.6}
+.footer-disclaimer{background:rgba(0,0,0,.2);padding:15px 0;margin-top:20px;border-top:1px solid rgba(255,255,255,.1)}
+.footer-disclaimer p{font-size:.78rem;opacity:.65;text-align:center;max-width:900px;margin:0 auto;line-height:1.6}
+
+/* === RESPONSIVE === */
+@media(max-width:992px){
+  .hero-title{font-size:2.2rem}
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .hero-stats{flex-wrap:wrap;gap:20px}
+}
+@media(max-width:768px){
+  .hero-title{font-size:1.8rem}
+  .hero-section{padding:50px 0 40px}
+  .hero-buttons{flex-direction:column}
+  .hero-stats{justify-content:center}
+  .section{padding:40px 0}
+  .services-grid{grid-template-columns:1fr}
+  .trivia-container{padding:25px 20px}
+  .lang-toggle-wrapper{top:10px;right:10px}
+  .lang-btn{width:40px;height:40px;font-size:11px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .page-hero h1{font-size:1.8rem}
+}
+@media(max-width:480px){
+  .hero-title{font-size:1.5rem}
+  .footer-grid{grid-template-columns:1fr}
+  .btn{padding:12px 20px;font-size:.9rem}
+  .stat-number{font-size:1.5rem}
+}
