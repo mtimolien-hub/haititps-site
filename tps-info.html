@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Tout enfòmasyon sou Temporary Protected Status (TPS) pou Ayiti — estati aktyèl, dat enpòtan, elijibilite, ak FAQ.">
+<title>TPS Info — HaitiTPS.us</title>
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Language Toggle -->
+<div class="lang-toggle-wrapper" aria-label="Language selector">
+  <button class="lang-btn active" data-lang="ht" title="Kreyòl Ayisyen" onclick="window.HT_i18n.setLang('ht')">HT</button>
+  <button class="lang-btn" data-lang="en" title="English" onclick="window.HT_i18n.setLang('en')">EN</button>
+  <button class="lang-btn" data-lang="fr" title="Français" onclick="window.HT_i18n.setLang('fr')">FR</button>
+</div>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/13022908592" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- Legal Bar -->
+<div class="legal-bar">
+  <div class="container">
+    <p data-i18n="legal_bar"><strong>AVÈTISMAN:</strong> Sagesse Solutions Administratives (SSA) pa avoka e pa bay konsèy legal. Nou kolekte done pèsonèl sèlman pou prepare aplikasyon yo. Pou ka konplèks, kontakte yon avoka imigrasyon. <a href="privacy.html">Règ Konfidansyalite</a> | <a href="legal.html">Avètisman Legal</a></p>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="header-top">
+    <div class="container">
+      <span><span data-i18n="header_phone">Rele nou: </span><a href="tel:+13022908592">+1 (302) 290-8592</a> &nbsp;|&nbsp; <a href="https://wa.me/13022908592" target="_blank" rel="noopener">WhatsApp</a></span>
+    </div>
+  </div>
+  <div class="header-main">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+      <a href="index.html" class="site-logo">Haiti<span style="color:var(--ht-gold)">TPS</span>.us</a>
+      <nav class="main-nav">
+        <a href="index.html" data-i18n="nav_home">Akèy</a>
+        <a href="services.html" data-i18n="nav_services">Sèvis</a>
+        <a href="tps-info.html" data-i18n="nav_tps">TPS Info</a>
+        <a href="about.html" data-i18n="nav_about">Konsènan Nou</a>
+        <a href="contact.html" data-i18n="nav_contact">Kontakte Nou</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false" onclick="document.querySelector('.main-nav').classList.toggle('active');this.innerHTML=document.querySelector('.main-nav').classList.contains('active')?'&#10005;':'&#9776;'">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- Page Hero -->
+  <section class="about-hero">
+    <div class="container">
+      <h1 data-i18n="tps_page_title">Enfòmasyon sou TPS Ayiti</h1>
+      <p data-i18n="tps_page_subtitle">Tout sa ou bezwen konnen sou Temporary Protected Status (TPS) pou Ayiti — dènye mizajou, elijibilite, ak kijan pou aplike.</p>
+    </div>
+  </section>
+
+  <!-- Current Status Alert -->
+  <section class="section">
+    <div class="container">
+      <div class="tps-alert">
+        <h3 data-i18n="tps_current_title">&#9888; Estati Aktyèl TPS Ayiti — Avril 2026</h3>
+        <p data-i18n="tps_current_p1">Nan dat 28 Novanm 2025, Sekretè Sekirite Nasyonal Kristi Noem te anonse fen deziyasyon TPS pou Ayiti, avèk yon dat tèminazon 3 Fevriye 2026.</p>
+        <p data-i18n="tps_current_p2"><strong>Men, nan dat 2 Fevriye 2026,</strong> yon jij federal nan Tribinal Distri Washington D.C. te bay yon lòd pou bloke (stay) desizyon tèminazon an. Dosye a se: <em>Miot et al. v. Trump et al., No. 25-cv-02471-ACR (D.D.C.)</em>.</p>
+        <p data-i18n="tps_current_p3"><strong>Sa vle di:</strong> TPS Ayiti toujou an vigè pou kounye a gras ak lòd tribinal la. Tout EAD (Employment Authorization Documents / Kat Travay) ki te gen dat ekspirasyon ki rive yo resevwa yon ekstansyon otomatik selon lòd tribinal la.</p>
+        <p data-i18n="tps_current_p4">Kou Siprèm lan gen odyans oral sou dosye sa a ki planifye pou fen Avril 2026. Tanpri tcheke sit USCIS la regilyèman pou dènye enfòmasyon yo.</p>
+        <p class="alert-date" data-i18n="tps_current_date">Dènye mizajou: Avril 2026 | Sous: USCIS.gov, E-Verify, Cohen Tucker + Ades</p>
+      </div>
+
+      <!-- Key Dates -->
+      <div class="section-header" style="margin-top:50px;">
+        <div class="underline"></div>
+        <h2 data-i18n="tps_dates_title">Dat Enpòtan TPS Ayiti</h2>
+      </div>
+
+      <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="service-card">
+          <span class="form-label" style="background:rgba(210,16,52,0.1); color:var(--ht-red);">TPS</span>
+          <h3 data-i18n="tps_date1_title">TPS Deziye Jiska</h3>
+          <p data-i18n="tps_date1_desc">3 Fevriye 2026 (men bloke pa lòd tribinal — toujou an vigè)</p>
+        </div>
+        <div class="service-card">
+          <span class="form-label">Enskripsyon</span>
+          <h3 data-i18n="tps_date2_title">Peryòd Enskripsyon</h3>
+          <p data-i18n="tps_date2_desc">Enskripsyon ak re-enskripsyon aktyèlman disponib selon lòd tribinal la. Kontakte nou pou verifye elijibilite ou.</p>
+        </div>
+        <div class="service-card">
+          <span class="form-label" style="background:rgba(40,167,69,0.1); color:var(--ht-success);">EAD</span>
+          <h3 data-i18n="tps_date3_title">Ekstansyon EAD Otomatik</h3>
+          <p data-i18n="tps_date3_desc">EAD ki ekspire otomatikman rete valid gras ak lòd tribinal la. Tcheke E-Verify pou konfirmasyon.</p>
+        </div>
+        <div class="service-card">
+          <span class="form-label" style="background:rgba(210,16,52,0.1); color:var(--ht-red);">KOU SIPRÈM</span>
+          <h3 data-i18n="tps_date4_title">Odyans Kou Siprèm</h3>
+          <p data-i18n="tps_date4_desc">Odyans oral planifye pou fen Avril 2026. Desizyon Kou Siprèm lan ap detèmine avni TPS la.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Eligibility -->
+  <section class="section" style="background:var(--ht-light);">
+    <div class="container">
+      <div class="section-header">
+        <div class="underline"></div>
+        <h2 data-i18n="tps_elig_title">Kondisyon Elijibilite pou TPS Ayiti</h2>
+      </div>
+      <div class="detail-block">
+        <p data-i18n="tps_elig_p1">Pou elijib pou TPS Ayiti, ou dwe satisfè tout kondisyon sa yo:</p>
+        <ul style="margin:15px 0 15px 25px; line-height:2;">
+          <li data-i18n="tps_elig_li1">Ou se yon sitwayen Ayisyen (oswa yon moun san nasyonalite ki te rete an Ayiti dènye fwa)</li>
+          <li data-i18n="tps_elig_li2">Ou te prezan nan Etazini nan dat USCIS mande a pou prezans fizik</li>
+          <li data-i18n="tps_elig_li3">Ou te rezide kontinyèlman nan Etazini depi dat USCIS mande a pou rezidans kontini</li>
+          <li data-i18n="tps_elig_li4">Ou pa gen okenn kondanasyon pou krim grav (felony) oswa 2+ deli (misdemeanors) nan Etazini</li>
+          <li data-i18n="tps_elig_li5">Ou pa gen okenn rezon ki rann ou inadmisib dapre lwa imigrasyon an</li>
+        </ul>
+        <p data-i18n="tps_elig_p2"><strong>Pa sèten si w elijib?</strong> Kontakte nou pou yon konsiltasyon gratis. Nou ka revize sitiyasyon ou epi gide w nan pwochèn etap yo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="underline"></div>
+        <h2 data-i18n="tps_faq_title">Kesyon Yo Poze Souvan (FAQ)</h2>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" data-i18n="tps_faq1_q">Èske TPS Ayiti toujou disponib?</div>
+        <div class="faq-answer"><p data-i18n="tps_faq1_a">Wi, TPS Ayiti toujou an vigè gras ak yon lòd tribinal federal (Miot v. Trump) ki bloke desizyon tèminazon Sekretè Noem te anonse nan Novanm 2025. Sitiyasyon an ap chanje selon desizyon Kou Siprèm lan ki prevwa pou fen Avril 2026.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" data-i18n="tps_faq2_q">Ki fòm mwen bezwen ranpli pou TPS?</div>
+        <div class="faq-answer"><p data-i18n="tps_faq2_a">Ou bezwen ranpli Fòm I-821 (TPS) ak Fòm I-765 (Kat Travay/EAD). Si w vle vwayaje deyò Etazini, ou bezwen Fòm I-131 (Advance Parole) tou. SSA ka prepare tout fòm sa yo pou ou.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" data-i18n="tps_faq3_q">Konbyen sa koute pou aplike pou TPS?</div>
+        <div class="faq-answer"><p data-i18n="tps_faq3_a">Frè USCIS yo chanje regilyèman. Depi 2026, H.R.1 te enpoze frè siplemantè sou frè regilye yo. Vizite uscis.gov/fees pou dènye frè yo. USCIS pa aksepte chèk pèsonèl ankò — sèlman money order, kat kredi/debi, oswa peman elektwonik. Kontakte nou pou yon estimasyon konplè.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" data-i18n="tps_faq4_q">Èske EAD mwen toujou valid?</div>
+        <div class="faq-answer"><p data-i18n="tps_faq4_a">Si EAD ou te gen yon dat ekspirasyon ki rive, lòd tribinal la bay yon ekstansyon otomatik. Ou ka verifye estati EAD ou sou E-Verify (e-verify.gov). Montre lòd tribinal la ak EAD ou bay anplwayè w si li gen kesyon.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" data-i18n="tps_faq5_q">Èske SSA se yon kabinè avoka?</div>
+        <div class="faq-answer"><p data-i18n="tps_faq5_a">Non. SSA pa yon kabinè avoka epi nou pa bay konsèy legal. Nou se yon sant sèvis administratif ki ede prepare ak soumèt aplikasyon USCIS. Pou ka konplèks oswa kesyon legal, nou rekòmande pou w kontakte yon avoka imigrasyon ki gen lisans.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" data-i18n="tps_faq6_q">Kisa ki pase si Kou Siprèm lan deside kont TPS?</div>
+        <div class="faq-answer"><p data-i18n="tps_faq6_a">Si Kou Siprèm lan pèmèt tèminazon TPS la, USCIS ap bay yon peryòd tranzisyon (anjeneral 60-120 jou) pou benefisyè TPS yo mete afè yo an lòd. Pandan tan sa a, li ta enpòtan pou konsidere lòt opsyon imigrasyon ki ka disponib pou ou. Kontakte yon avoka imigrasyon pou konsèy sou sitiyasyon espesifik ou.</p></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 data-i18n="cta_title">Bezwen Èd ak Aplikasyon USCIS Ou?</h2>
+      <p data-i18n="cta_subtitle">Kontakte nou jodi a. Premye konsiltasyon gratis.</p>
+      <div class="hero-buttons" style="justify-content:center;">
+        <a href="contact.html" class="btn btn-primary" data-i18n="hero_btn_apply">Kòmanse Aplikasyon W</a>
+        <a href="https://wa.me/13022908592" target="_blank" rel="noopener" class="btn btn-red" data-i18n="hero_btn_whatsapp">WhatsApp Nou</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Haiti<span style="color:var(--ht-gold)">TPS</span>.us</h4>
+        <p data-i18n="footer_about">Sagesse Solutions Administratives (SSA) se yon sant sèvis konsiltasyon ki konekte imigran Ayisyen ak ekspè pou ede yo ak aplikasyon USCIS yo.</p>
+        <p><strong>Tel / WhatsApp:</strong><br><a href="tel:+13022908592" style="color:var(--ht-gold)">+1 (302) 290-8592</a></p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_links_title">Lyen Rapid</h4>
+        <ul><li><a href="index.html" data-i18n="nav_home">Akèy</a></li><li><a href="services.html" data-i18n="nav_services">Sèvis</a></li><li><a href="tps-info.html" data-i18n="nav_tps">TPS Info</a></li><li><a href="about.html" data-i18n="nav_about">Konsènan Nou</a></li><li><a href="contact.html" data-i18n="nav_contact">Kontakte Nou</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_services_title">Sèvis Nou Yo</h4>
+        <ul><li><a href="services.html">I-821 (TPS)</a></li><li><a href="services.html">I-765 (EAD)</a></li><li><a href="services.html">I-131 (Travel)</a></li><li><a href="services.html">I-130 / I-485</a></li><li><a href="services.html">N-400</a></li><li><a href="services.html" data-i18n="footer_translation">Tradiksyon</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_legal_title">Legal</h4>
+        <ul><li><a href="privacy.html" data-i18n="nav_privacy">Règ Konfidansyalite</a></li><li><a href="legal.html" data-i18n="nav_legal">Avètisman Legal</a></li></ul>
+        <p style="margin-top:15px;font-size:0.85rem;" data-i18n="footer_translation_link">Tout fòm USCIS disponib gratis sou <a href="https://www.uscis.gov/forms" target="_blank" rel="noopener" style="color:var(--ht-gold)">uscis.gov/forms</a></p>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      <p data-i18n="footer_disclaimer">Sagesse Solutions Administratives (SSA) pa yon kabinè avoka epi pa bay konsèy legal. Enfòmasyon sou sit sa a se pou enfòmasyon jeneral sèlman. Pou konsèy legal, tanpri kontakte yon avoka imigrasyon ki gen lisans.</p>
+      <p>&copy; 2026 Sagesse Solutions Administratives (SSA) — haititps.us</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
