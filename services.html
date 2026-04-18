@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sèvis konplè SSA pou aplikasyon USCIS: TPS, EAD, Travel Document, Green Card, Sitwayènte, Tradiksyon, ak plis.">
+<title>Sèvis Nou Yo — HaitiTPS.us</title>
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Language Toggle -->
+<div class="lang-toggle-wrapper" aria-label="Language selector">
+  <button class="lang-btn active" data-lang="ht" title="Kreyòl Ayisyen" onclick="window.HT_i18n.setLang('ht')">HT</button>
+  <button class="lang-btn" data-lang="en" title="English" onclick="window.HT_i18n.setLang('en')">EN</button>
+  <button class="lang-btn" data-lang="fr" title="Français" onclick="window.HT_i18n.setLang('fr')">FR</button>
+</div>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/13022908592" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- Legal Bar -->
+<div class="legal-bar">
+  <div class="container">
+    <p data-i18n="legal_bar"><strong>AVÈTISMAN:</strong> Sagesse Solutions Administratives (SSA) pa avoka e pa bay konsèy legal. Nou kolekte done pèsonèl sèlman pou prepare aplikasyon yo. Pou ka konplèks, kontakte yon avoka imigrasyon. <a href="privacy.html">Règ Konfidansyalite</a> | <a href="legal.html">Avètisman Legal</a></p>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="header-top">
+    <div class="container">
+      <span><span data-i18n="header_phone">Rele nou: </span><a href="tel:+13022908592">+1 (302) 290-8592</a> &nbsp;|&nbsp; <a href="https://wa.me/13022908592" target="_blank" rel="noopener">WhatsApp</a></span>
+      <span data-i18n="header_address">P.O. Box 282, Pittsville, MD 21850, USA</span>
+    </div>
+  </div>
+  <div class="header-main">
+    <div class="container">
+      <div class="site-brand"><div><h1>Haiti<span>TPS</span>.us</h1><small data-i18n="site_tagline">Sagesse Solutions Administratives</small></div></div>
+      <button class="menu-toggle" aria-expanded="false" aria-label="Menu">&#9776;</button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">Akèy</a></li>
+          <li><a href="services.html" class="active" data-i18n="nav_services">Sèvis</a></li>
+          <li><a href="tps-info.html" data-i18n="nav_tps">TPS Info</a></li>
+          <li><a href="about.html" data-i18n="nav_about">Konsènan Nou</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Kontakte Nou</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="about-hero">
+    <div class="container">
+      <h1 data-i18n="services_page_title">Sèvis Nou Yo</h1>
+      <p data-i18n="services_page_subtitle">Nou ofri asistans konplè pou tout aplikasyon imigrasyon USCIS ou yo.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- I-821 TPS -->
+      <div class="detail-block">
+        <h3 data-i18n="svc_detail_tps_title">&#128203; Fòm I-821 — Temporary Protected Status (TPS)</h3>
+        <p data-i18n="svc_detail_tps_p1">Temporary Protected Status (TPS) se yon estati tanporè ki pèmèt sitwayen Ayisyen ki deja nan Etazini rete legalman ak travay pandan yon peryòd ki detèmine. Pou elijib, ou dwe te nan Etazini depi dat USCIS mande a.</p>
+        <p data-i18n="svc_detail_tps_p2"><strong>Sa nou fè pou ou:</strong> Nou prepare Fòm I-821 la, rasanble tout dokiman sipò yo, verifye tout bagay, epi soumèt aplikasyon an bay USCIS. Nou jere renouvèlman TPS tou.</p>
+        <p data-i18n="svc_detail_tps_p3"><strong>Dènye Nouvèl:</strong> TPS Ayiti aktyèlman an vigè gras ak yon lòd tribinal federal (Miot v. Trump). Kontakte nou pou konnen si w elijib.</p>
+      </div>
+
+      <!-- I-765 EAD -->
+      <div class="detail-block">
+        <h3 data-i18n="svc_detail_ead_title">&#128179; Fòm I-765 — Employment Authorization Document (Kat Travay / EAD)</h3>
+        <p data-i18n="svc_detail_ead_p1">EAD la se kat travay ofisyèl la ki pèmèt ou travay legalman nan Etazini. Li nesesè pou tout moun ki gen TPS.</p>
+        <p data-i18n="svc_detail_ead_p2"><strong>Sa nou fè pou ou:</strong> Nou prepare Fòm I-765 la, rasanble foto paspò ki konfòm, verifye tout enfòmasyon, epi soumèt li bay USCIS.</p>
+      </div>
+
+      <!-- I-131 Travel -->
+      <div class="detail-block">
+        <h3 data-i18n="svc_detail_travel_title">&#9992;&#65039; Fòm I-131 — Travel Document (Dokiman Vwayaj)</h3>
+        <p data-i18n="svc_detail_travel_p1">Fòm I-131 (Advance Parole) pèmèt ou vwayaje deyò Etazini ak retounen legalman. Ou dwe jwenn apwobasyon ANVAN ou vwayaje.</p>
+        <p data-i18n="svc_detail_travel_p2"><strong>Sa nou fè pou ou:</strong> Nou prepare Fòm I-131 la ak tout dokiman sipò yo epi soumèt li bay USCIS.</p>
+      </div>
+
+      <!-- I-130 -->
+      <div class="detail-block">
+        <h3 data-i18n="svc_detail_i130_title">&#128104;&#8205;&#128105;&#8205;&#128103;&#8205;&#128102; Fòm I-130 — Petition for Alien Relative</h3>
+        <p data-i18n="svc_detail_i130_p1">Fòm I-130 pèmèt yon sitwayen Ameriken oswa yon rezidan pèmanan fè petisyon pou yon manm fanmi pwòch vin rezidan pèmanan.</p>
+      </div>
+
+      <!-- I-485 -->
+      <div class="detail-block">
+        <h3 data-i18n="svc_detail_i485_title">&#128230; Fòm I-485 — Adjustment of Status (Green Card)</h3>
+        <p data-i18n="svc_detail_i485_p1">Fòm I-485 pèmèt ou aplike pou vin rezidan pèmanan (jwenn Green Card) san ou pa bezwen kite Etazini.</p>
+      </div>
+
+      <!-- N-400 -->
+      <div class="detail-block">
+        <h3 data-i18n="svc_detail_n400_title">&#127482;&#127480; Fòm N-400 — Application for Naturalization (Sitwayènte)</h3>
+        <p data-i18n="svc_detail_n400_p1">Fòm N-400 se fòm ou ranpli pou aplike pou vin sitwayen Ameriken. Ou dwe gen Green Card pou omwen 5 an (oswa 3 an si ou marye ak yon sitwayen Ameriken).</p>
+      </div>
+
+      <!-- Translation -->
+      <div class="detail-block">
+        <h3 data-i18n="svc_detail_translation_title">&#128196; Tradiksyon Dokiman</h3>
+        <p data-i18n="svc_detail_translation_p1">Nou tradwi tout dokiman ofisyèl ou yo (Kreyòl &#8596; Anglè &#8596; Fransè) pou aplikasyon USCIS yo. Tradiksyon sètifye disponib.</p>
+      </div>
+
+      <!-- Submission -->
+      <div class="detail-block">
+        <h3 data-i18n="svc_detail_submission_title">&#128232; Soumisyon Dokiman ak Peman USCIS</h3>
+        <p data-i18n="svc_detail_submission_p1">Nou soumèt aplikasyon ou ak tout dokiman sipò yo bay USCIS. Nou jere peman frè USCIS tou sou non ou.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 data-i18n="cta_title">Pare pou Kòmanse?</h2>
+      <p data-i18n="cta_subtitle">Kontakte nou jodi a pou kòmanse aplikasyon ou oswa poze kesyon.</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn btn-primary" data-i18n="cta_btn_contact">Kontakte Nou</a>
+        <a href="tel:+13022908592" class="btn btn-secondary" data-i18n="hero_btn_call">Rele Nou: (302) 290-8592</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Haiti<span style="color:var(--ht-gold)">TPS</span>.us</h4>
+        <p data-i18n="footer_about">Sagesse Solutions Administratives (SSA) se yon sant sèvis konsiltasyon ki konekte imigran Ayisyen ak ekspè pou ede yo ak aplikasyon USCIS yo.</p>
+        <p style="margin-top:10px"><strong>Tel / WhatsApp:</strong><br><a href="tel:+13022908592" style="color:var(--ht-gold)">+1 (302) 290-8592</a></p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_links_title">Lyen Rapid</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">Akèy</a></li>
+          <li><a href="services.html" data-i18n="nav_services">Sèvis</a></li>
+          <li><a href="tps-info.html" data-i18n="nav_tps">TPS Info</a></li>
+          <li><a href="about.html" data-i18n="nav_about">Konsènan Nou</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Kontakte Nou</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_services_title">Sèvis Nou Yo</h4>
+        <ul>
+          <li><a href="services.html">I-821 (TPS)</a></li>
+          <li><a href="services.html">I-765 (EAD)</a></li>
+          <li><a href="services.html">I-131 (Travel)</a></li>
+          <li><a href="services.html">I-130 / I-485</a></li>
+          <li><a href="services.html">N-400</a></li>
+          <li><a href="services.html" data-i18n="svc_translation">Tradiksyon</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_legal_title">Legal</h4>
+        <ul>
+          <li><a href="privacy.html" data-i18n="nav_privacy">Règ Konfidansyalite</a></li>
+          <li><a href="legal.html" data-i18n="nav_legal">Avètisman Legal</a></li>
+        </ul>
+        <div class="footer-disclaimer" data-i18n="footer_disclaimer"><strong>AVÈTISMAN:</strong> SSA pa yon kabinè avoka epi pa bay konsèy legal. Nou kolekte done pèsonèl sèlman pou prepare aplikasyon USCIS. Pou ka konplèks, kontakte yon avoka imigrasyon ki gen lisans.</div>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Sagesse Solutions Administratives (SSA). Tout dwa rezève.</p></div>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
