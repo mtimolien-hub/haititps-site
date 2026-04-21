@@ -215,7 +215,20 @@ var T = {
   footer_translation:{ht:"Tradiksyon",en:"Translation",fr:"Traduction"},
   footer_disclaimer:{ht:'<strong>AVÈTISMAN LEGAL:</strong> Sagesse Solutions Administratives (SSA) pa yon kabinè avoka epi pa bay konsèy legal. Nou kolekte done pèsonèl sèlman pou prepare aplikasyon imigrasyon yo. Pou ka konplèks, kontakte yon avoka imigrasyon ki gen lisans. <a href="privacy.html" style="color:var(--ht-gold)">Règ Konfidansyalite</a> | <a href="legal.html" style="color:var(--ht-gold)">Avètisman Legal</a>',en:'<strong>LEGAL DISCLAIMER:</strong> Sagesse Solutions Administratives (SSA) is not a law firm and does not provide legal advice. We collect personal data solely to prepare immigration applications. For complex cases, consult a licensed immigration attorney. <a href="privacy.html" style="color:var(--ht-gold)">Privacy Policy</a> | <a href="legal.html" style="color:var(--ht-gold)">Legal Disclaimer</a>',fr:'<strong>AVERTISSEMENT L\u00c9GAL :</strong> SSA n\'est pas un cabinet d\'avocats. Nous collectons les donn\u00e9es personnelles uniquement pour pr\u00e9parer les demandes. <a href="privacy.html" style="color:var(--ht-gold)">Confidentialit\u00e9</a> | <a href="legal.html" style="color:var(--ht-gold)">Avertissement</a>'},
   footer_copy:{ht:"\u00a9 2026 Sagesse Solutions Administratives (SSA). Tout dwa rezève.",en:"\u00a9 2026 Sagesse Solutions Administratives (SSA). All rights reserved.",fr:"\u00a9 2026 Sagesse Solutions Administratives (SSA). Tous droits r\u00e9serv\u00e9s."},
-  no_content:{ht:"Pa gen kontni disponib pou kounye a.",en:"No content available at this time.",fr:"Aucun contenu disponible pour le moment."}
+  no_content:{ht:"Pa gen kontni disponib pou kounye a.",en:"No content available at this time.",fr:"Aucun contenu disponible pour le moment."},
+
+  /* Contact Form Dropdown Options */
+  form_opt_default:{ht:"-- Chwazi yon Sèvis --",en:"-- Select a Service --",fr:"-- Choisir un Service --"},
+  form_opt_tps:{ht:"I-821 — TPS",en:"I-821 — TPS",fr:"I-821 — TPS"},
+  form_opt_ead:{ht:"I-765 — Kat Travay (EAD)",en:"I-765 — Work Permit (EAD)",fr:"I-765 — Permis de Travail (EAD)"},
+  form_opt_travel:{ht:"I-131 — Dokiman Vwayaj",en:"I-131 — Travel Document",fr:"I-131 — Document de Voyage"},
+  form_opt_family:{ht:"I-130 — Petisyon Fanmi",en:"I-130 — Family Petition",fr:"I-130 — Pétition Familiale"},
+  form_opt_gc:{ht:"I-485 — Ajisteman Estati",en:"I-485 — Adjustment of Status",fr:"I-485 — Ajustement de Statut"},
+  form_opt_citizenship:{ht:"N-400 — Sitwayènte",en:"N-400 — Citizenship",fr:"N-400 — Citoyenneté"},
+  form_opt_translation:{ht:"Tradiksyon Dokiman",en:"Document Translation",fr:"Traduction de Documents"},
+  form_opt_submission:{ht:"Soumisyon / Peman USCIS",en:"USCIS Submission / Payment",fr:"Soumission / Paiement USCIS"},
+  form_opt_other:{ht:"Lòt",en:"Other",fr:"Autre"},
+  contact_email_label:{ht:"Imèl",en:"Email",fr:"Courriel"}
 };
 
 /* ---- Current language ---- */
@@ -230,9 +243,16 @@ function applyTranslations(lang) {
   var els = document.querySelectorAll('[data-i18n]');
   for (var i = 0; i < els.length; i++) {
     var key = els[i].getAttribute('data-i18n');
-    if (T[key] && T[key][lang] !== undefined) {
-      els[i].innerHTML = T[key][lang];
+        if (T[key] && T[key][lang] !== undefined) {
+      if (els[i].tagName === 'OPTION') {
+        els[i].textContent = T[key][lang];
+      } else if (els[i].tagName === 'INPUT' || els[i].tagName === 'TEXTAREA') {
+        els[i].placeholder = T[key][lang];
+      } else {
+        els[i].innerHTML = T[key][lang];
+      }
     }
+
   }
 
   /* Update lang buttons */
