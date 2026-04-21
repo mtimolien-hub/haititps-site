@@ -19,7 +19,7 @@ var questions=[
 ];
 
 function getLang(){
-  return (window.HT_i18n && window.HT_i18n.currentLang) ? window.HT_i18n.currentLang : 'ht';
+  return (window.HT_i18n && window.HT_i18n.getLang) ? window.HT_i18n.getLang() : 'ht';
 }
 
 var currentQ=0, score=0, answered=false;
@@ -110,14 +110,11 @@ function init(){
 }
 if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
 
-/* ---- Re-render on language change ---- */
-if(window.HT_i18n && window.HT_i18n.onLangChange){
-  window.HT_i18n.onLangChange(function(){
-    if(document.getElementById('trivia-game')){
-      currentQ=0; score=0;
-      order=shuffle(questions.map(function(_,i){return i;}));
-      renderQuestion();
-    }
-  });
-}
+/* ---- Re-render on language change (preserves game state) ---- */
+document.addEventListener('langchange', function(){
+  if(document.getElementById('trivia-game')){
+    renderQuestion();
+  }
+});
+
 })();
